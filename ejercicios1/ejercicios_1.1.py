@@ -7,7 +7,7 @@ curso_dalto = 1.5
 #diferencias de duracion
 
 diferencia_con_min = 100 - curso_dalto / otros_cursos_min * 100
-diferencia_con_max = 100 - curso_dalto * 1000 // otros_cursos_max / 10
+diferencia_con_max = round(100 - curso_dalto / otros_cursos_max * 100,1) 
 diferencia_con_prom = 100 - curso_dalto / otros_cursos_prom * 100
 print("-------------------")
 print("el curso de dalto dura:")
@@ -19,8 +19,8 @@ print("-------------------")
 crudo_promedio = 5
 crudo_dalto = 3.5
 
-tiempo_vacio_promedio = 100 - otros_cursos_prom * 1000 // crudo_promedio / 10
-tiempo_vacio_dalto = 100 - curso_dalto *1000 // crudo_dalto / 10
+tiempo_vacio_promedio = round(100 - otros_cursos_prom / crudo_promedio * 100,1)
+tiempo_vacio_dalto = round(100 - curso_dalto / crudo_dalto * 100,1)
 
 print(f"Un curso promedio elimina un {tiempo_vacio_promedio}% de tiempo vacio")
 print(f"Este curso elimino el {tiempo_vacio_dalto}% de tiempo vacio")
