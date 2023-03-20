@@ -30,11 +30,27 @@ def password_random(num):
     c2 = num
     c3 = num - 5
     contra = f"{chars[c1]}{chars[c2]}{chars[c3]}{num*2}"
-    return (contra)
+    return (contra,num)
 
-password = password_random(2)
-frase = f"Tu contra nueva es: {password}"
-print(frase)
+#desepaquetado de la funcion
+password,primer_numero = password_random(5)
 
-    
+#mostrar datos y resultados
+print (f"Tu contra nueva es: {password}")
+print (f"Tu numero es: {primer_numero}")
+
+#utilizando el operador * como argumento (*args)
+def suma(nombre,*numeros):
+    return f"{nombre}, tu suma es igual a: {sum(numeros)}"
+
+resultado  = suma("Gaston",1,2,3,4,5,6)
+print(resultado)
+
+def suma_total(nums):
+    return sum([*nums])
+
+resultado2 = suma_total([3,4,5,6,7])
+print(resultado2)
+
+  
     
